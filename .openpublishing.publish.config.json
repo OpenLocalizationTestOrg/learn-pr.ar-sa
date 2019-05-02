@@ -8,18 +8,21 @@
       "monikers": [],
       "moniker_ranges": [],
       "xref_query_tags": [
+        "/learn-quiz-pr",
         "/dotnet"
       ],
       "open_to_public_contributors": false,
       "type_mapping": {
-        "Achievements": "Toc",
-        "LearningPath": "Content",
+        "Conceptual": "Content",
         "Module": "Content",
-        "ModuleUnit": "Content",
-        "ZonePivotGroups": "Toc"
+        "ModuleList": "Content",
+        "Tutorial": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
+      "TripleCrownValidation": {
+        "quizTag": "/learn-quiz-pr"
+      },
       "customized_tasks": {
         "docset_postbuild": [
           "_dependentPackages/CommonPlugins/tools/TripleCrownValidation.ps1"
@@ -28,6 +31,7 @@
     }
   ],
   "notification_subscribers": [],
+  "sync_notification_subscribers": [],
   "branches_to_filter": [
     "live-sxs",
     "master-sxs"
@@ -36,8 +40,7 @@
   "git_repository_branch_open_to_public_contributors": "master",
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
-  "need_preview_pull_request": true,
-  "enable_incremental_build": false,
+  "need_preview_pull_request": false,
   "contribution_branch_mappings": {},
   "dependent_repositories": [
     {
@@ -58,13 +61,14 @@
   ],
   "branch_target_mapping": {},
   "need_generate_pdf_url_template": false,
+  "targets": {},
   "dependent_packages": [
     {
       "id": "Microsoft.OpenPublishing.CommonPlugins",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2",
+      "nuget_feed": "https://www.myget.org/F/op-dev/api/v2",
       "path_to_root": "_dependentPackages/CommonPlugins",
       "target_framework": "net45",
-      "version": "latest"
+      "version": "latest-prerelease"
     }
   ]
 }
